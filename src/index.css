@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+
+/* base styles */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: #109def;
+  color: #FFD700;
+  font-family: 'Sail', cursive;
+}
