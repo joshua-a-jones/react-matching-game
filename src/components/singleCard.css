@@ -1,20 +1,49 @@
 .card {
     width:150px;
+    height: 150px;
     border-radius: 20px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    overflow: hidden;
+    position: relative;
+    border: solid 2px white;
+    background-color:  #990629 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    width:100%;
+    display:block;
   }
   
   .card:hover {
     cursor:pointer;
   }
   
+  .card-front {
+    background-color:  #990629 ;
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flipped .card-front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+  }
 
 .card-back {
     background-color: burlywood;
-    
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
   }
-  
-  .card-front {
-    background-color: darkred;
-    
+
+  .flipped .card-back {
+    transform: rotateY(90deg);
+    transition-delay: 0;
   }

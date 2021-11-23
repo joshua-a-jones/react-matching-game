@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { SingleCard } from './components/singleCard';
 
@@ -15,11 +15,14 @@ const cardImages = [
 export interface Card {
   src: string;
   id: number;
+  matched: boolean;
 }
 
 function App() {
   const [cards, setCards] = useState<Card[]>([]);
   const [turns, setTurns] = useState(0);
+  const [choice1, setChoice1] = useState<Card | null>(null)
+  const [choice2, setChoice2] = useState<Card | null>(null)
 
   const shuffleCards = () => {
     const shuffledCards = [];
@@ -28,12 +31,16 @@ function App() {
       let randId = Math.floor(Math.random()*10000);
       shuffledCards.push(
         {...cardImages[i],
-          id:randId}
+          id:randId,
+          matched: false
+        }
       );
       randId = Math.floor(Math.random()*10000);
       shuffledCards.push(
         {...cardImages[i],
-          id:randId}
+          id:randId,
+          matched:false
+        }
       );
     };
 
@@ -41,13 +48,54 @@ function App() {
     setTurns(0);
   };
 
+  const handleChoice = (card: Card) => {
+    if (choice1 && choice2) {
+      return;
+    } else if (choice1) {
+      setChoice2(card)
+    } else {
+      setChoice1(card);
+    }
+  }
+
+  const resetTurn = () => {
+    setChoice1(null);
+    setChoice2(null);
+    setTurns(prevTurns => prevTurns + 1);
+  }
+
+  useEffect(() => {
+    if (choice1 && choice2 ) {
+      if (choice1.src === choice2.src) {
+        setCards(prevCards => { 
+          return prevCards.map(card => {
+            if (card.src === choice1.src) {
+              return {...card, matched: true}
+            } else {
+              return card
+            }
+          })
+        })
+        resetTurn();
+      } else {
+        setTimeout(() => resetTurn(), 1000);
+      }
+    }
+  },[choice1, choice2])
 
   return (
     <div className="App">
-      <h1>Treasure Match</h1>
+      <h1>Pirate Matching Game</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid" >
-        {cards.map(card => <SingleCard card={card} />)}
+        {cards.map(card => 
+          <SingleCard
+            card={card}
+            key={card.id}
+            handleChoice={handleChoice}
+            flipped={card === choice1 || card === choice2 || card.matched}
+            />
+        )}
       </div>
     </div>
   );

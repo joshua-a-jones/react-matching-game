@@ -1,10 +1,11 @@
 .App {
   max-width: 916px;
   margin: 40px auto;
+  text-align: center;
 }
 
 button {
-  background: none;
+  background:#EF6210;
   border: 2px solid #fff;
   padding: 6px 12px;
   border-radius: 4px;
@@ -12,10 +13,22 @@ button {
   cursor: pointer;
   font-size: 1em;
   color:black;
+  margin: 0px 0px 20px 0px;
 }
 
-button:hover {
-  background:#EF6210;
+button:after {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.5)
+}
+
+button:after:hover {
+  opacity: 1;
 }
 
 .card-grid {
@@ -23,6 +36,11 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:20px;
   width: 100%;
+
+}
+
+h1 {
+  font-size:4em;
 }
 
 
