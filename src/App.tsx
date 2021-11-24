@@ -4,12 +4,12 @@ import { SingleCard } from './components/singleCard';
 
 
 const cardImages = [
-  {src: '/img/card-1.png'},
-  {src: '/img/card-2.png'},
-  {src: '/img/card-3.png'},
-  {src: '/img/card-4.png'},
-  {src: '/img/card-5.png'},
-  {src: '/img/card-6.png'}
+  {src: 'img/card-1.png'},
+  {src: 'img/card-2.png'},
+  {src: 'img/card-3.png'},
+  {src: 'img/card-4.png'},
+  {src: 'img/card-5.png'},
+  {src: 'img/card-6.png'}
 ]
 
 export interface Card {

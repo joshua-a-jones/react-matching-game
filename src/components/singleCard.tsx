@@ -19,7 +19,7 @@ const SingleCard = ({ card, flipped, handleChoice }: cardProps) => {
                 </div>
                 <div className='card card-back'>
                     <img 
-                        src={'/img/card-back.png'} 
+                        src={'img/card-back.png'} 
                         alt='card back' 
                         onClick={handleClick}
                     />
