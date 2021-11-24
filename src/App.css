@@ -4,43 +4,35 @@
   text-align: center;
 }
 
-button {
-  background:#EF6210;
-  border: 2px solid #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
+.new-button {
+  width:200px;
+  height:100px;
   cursor: pointer;
-  font-size: 1em;
-  color:black;
-  margin: 0px 0px 20px 0px;
+  background-image: url('assets/img/scroll.png');
+  font-family: fantasy;
+  color: black;
+  background-position: center;
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border:none;
+  font-size: 1.5em;
 }
 
-button:after {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,.5)
-}
-
-button:after:hover {
-  opacity: 1;
-}
 
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:20px;
   width: 100%;
-
+  margin: 15px 0 30px 0;
 }
 
 h1 {
   font-size:4em;
 }
 
-
+p {
+  font-family: fantasy;
+  color: black;
+}

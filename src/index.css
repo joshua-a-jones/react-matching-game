@@ -5,7 +5,12 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  background: #109def;
-  color: #FFD700;
+  background: #fac45a;
+  color: #990629;
   font-family: 'Sail', cursive;
+  background-image: url('assets/img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }

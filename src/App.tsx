@@ -42,6 +42,8 @@ function App() {
           matched:false
         }
       );
+      setChoice1(null);
+      setChoice2(null);
     };
 
     setCards(shuffledCards.sort((a, b) => a.id - b.id));
@@ -66,7 +68,7 @@ function App() {
 
   useEffect(() => {
     if (choice1 && choice2 ) {
-      if (choice1.src === choice2.src) {
+      if (choice1.src === choice2.src && choice1.id !== choice2.id) {
         setCards(prevCards => { 
           return prevCards.map(card => {
             if (card.src === choice1.src) {
@@ -83,20 +85,28 @@ function App() {
     }
   },[choice1, choice2])
 
+
+  useEffect(() => {
+    shuffleCards();
+  }, [])
+
   return (
     <div className="App">
-      <h1>Pirate Matching Game</h1>
-      <button onClick={shuffleCards}>New Game</button>
-      <div className="card-grid" >
-        {cards.map(card => 
-          <SingleCard
-            card={card}
-            key={card.id}
-            handleChoice={handleChoice}
-            flipped={card === choice1 || card === choice2 || card.matched}
-            />
-        )}
+      <h1>Treasure Hunt</h1>
+
+      <div className={'container'}>
+        <div className="card-grid" >
+          {cards.map(card => 
+            <SingleCard
+              card={card}
+              key={card.id}
+              handleChoice={handleChoice}
+              flipped={card === choice1 || card === choice2 || card.matched}
+              />
+          )}
+        </div>
       </div>
+      <button onClick={shuffleCards} className='new-button'>New Game</button>
       {cards.length > 0 && <div><p>Number of turns: {turns}</p></div>}
     </div>
   );
