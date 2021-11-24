@@ -13,16 +13,18 @@ const SingleCard = ({ card, flipped, handleChoice }: cardProps) => {
         handleChoice(card);
      }
     return (
-        <div className={flipped ? "flipped card" : "card"}>
-                <div className='card-front'>
+        <div className={flipped ? "flipped card-container" : "card-container"}>
+                <div className='card card-front'>
                     <img src={card.src} alt='card front' />
                 </div>
-                <img 
-                    src={'/img/card-back.png'} 
-                    alt='card back' 
-                    className='card-back'
-                    onClick={handleClick}
-                />
+                <div className='card card-back'>
+                    <img 
+                        src={'/img/card-back.png'} 
+                        alt='card back' 
+                        onClick={handleClick}
+                    />
+                </div>
+
         </div>
     )
 } 

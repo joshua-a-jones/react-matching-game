@@ -97,6 +97,7 @@ function App() {
             />
         )}
       </div>
+      {cards.length > 0 && <div><p>Number of turns: {turns}</p></div>}
     </div>
   );
 }
