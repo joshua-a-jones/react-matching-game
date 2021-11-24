@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-matching-game/static/css/main.c562d13c.chunk.css",
+    "main.js": "/react-matching-game/static/js/main.2881a350.chunk.js",
+    "main.js.map": "/react-matching-game/static/js/main.2881a350.chunk.js.map",
+    "runtime-main.js": "/react-matching-game/static/js/runtime-main.59de20b9.js",
+    "runtime-main.js.map": "/react-matching-game/static/js/runtime-main.59de20b9.js.map",
+    "static/js/2.4b859138.chunk.js": "/react-matching-game/static/js/2.4b859138.chunk.js",
+    "static/js/2.4b859138.chunk.js.map": "/react-matching-game/static/js/2.4b859138.chunk.js.map",
+    "index.html": "/react-matching-game/index.html",
+    "static/css/main.c562d13c.chunk.css.map": "/react-matching-game/static/css/main.c562d13c.chunk.css.map",
+    "static/js/2.4b859138.chunk.js.LICENSE.txt": "/react-matching-game/static/js/2.4b859138.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-matching-game/static/media/background.6b03f7eb.jpg",
+    "static/media/App.css": "/react-matching-game/static/media/scroll.93155b99.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59de20b9.js",
+    "static/js/2.4b859138.chunk.js",
+    "static/css/main.c562d13c.chunk.css",
+    "static/js/main.2881a350.chunk.js"
+  ]
+}
