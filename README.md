@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![app screenshot](https://github.com/joshua-a-jones/react-matching-game/blob/main/screen-shot.png)
+
 ## Description
 
 This is a small project I made for fun to accompany [the Net Ninja's Udemy course on building React Apps](https://www.udemy.com/course/build-web-apps-with-react-firebase/)
