@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "../App";
 import './singleCard.css';
+import cardBack from '../assets/img/card-back.png';
 
 interface cardProps {
     card: Card;
@@ -19,7 +20,7 @@ const SingleCard = ({ card, flipped, handleChoice }: cardProps) => {
                 </div>
                 <div className='card card-back'>
                     <img 
-                        src={'/public/img/card-back.png'} 
+                        src={cardBack} 
                         alt='card back' 
                         onClick={handleClick}
                     />

@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { SingleCard } from './components/singleCard';
+import card1Img from './assets/img/card-1.png';
+import card2Img from './assets/img/card-2.png';
+import card3Img from './assets/img/card-3.png';
+import card4Img from './assets/img/card-4.png';
+import card5Img from './assets/img/card-5.png';
+import card6Img from './assets/img/card-6.png';
 
 const cardImages = [
-  {src: '/public/img/card-1.png'},
-  {src: '/public/img/card-2.png'},
-  {src: '/public/img/card-3.png'},
-  {src: '/public/img/card-4.png'},
-  {src: '/public/img/card-5.png'},
-  {src: '/public/img/card-6.png'}
+  {src: card1Img},
+  {src: card2Img},
+  {src: card3Img},
+  {src: card4Img},
+  {src: card5Img},
+  {src: card6Img}
 ]
 
 export interface Card {
